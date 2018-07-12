@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+ifneq ($(BOARD_PROVIDES_GPTUTILS),true)
+
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -41,3 +43,5 @@ LOCAL_MODULE_OWNER := qti
 LOCAL_COPY_HEADERS_TO := gpt-utils/inc
 LOCAL_COPY_HEADERS := gpt-utils.h
 include $(BUILD_SHARED_LIBRARY)
+
+endif
